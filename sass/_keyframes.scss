@@ -1,0 +1,146 @@
+// Page Elements' Animations
+
+@charset "UTF-8";
+
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.zoomIn {
+  animation-name: zoomIn;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInDown {
+    animation-name: fadeInDown;
+  }
+
+
+  @keyframes wobble {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+  
+    15% {
+      transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+  
+    30% {
+      transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+  
+    45% {
+      transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+  
+    60% {
+      transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+  
+    75% {
+      transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .wobble {
+    animation-name: wobble;
+  }
+
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translate3d(-100%, 0, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInLeft {
+    animation-name: fadeInLeft;
+  }
+  
+
+
+
+// Window Preloader KeyFrame
+
+@keyframes flip {
+    0% {
+      transform: perspective(600px) rotateY(0deg);
+    }
+    20% {
+      background: #ff3115;
+    }
+    29.9% {
+      background: #ff3115;
+    }
+    30% {
+      transform: perspective(200px) rotateY(-90deg);
+      background: #e41f05;
+    }
+    54.999% {
+      opacity: 1;
+    }
+    55% {
+      opacity: 0;
+    }
+    60% {
+      transform: perspective(200px) rotateY(-180deg);
+      background: #e41f05;
+    }
+    100% {
+      transform: perspective(200px) rotateY(-180deg);
+      background: #e41f05;
+    }
+  }
+
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
